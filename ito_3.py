@@ -10,9 +10,15 @@ group_28 = [
 
 def show_student(student_record):
     #  print(student_record[0], student_record[1:])
-    print(show_student[0], ':', ', '.join(show_student[1:]))
+    marks = student_record[1:]
+    marks_as_int = []
+    for mark in marks:
+        mark = int(mark)
+        marks_as_int.append(mark)
+    marks_avg = sum(marks_as_int) / len(marks_as_int)
+    marks_as_str = ', '
+    print(f'{show_student[0]}:{ marks_as_str}')
 
 
 for record in group_28:
     show_student(record)
-
